@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav-links">
+            <a href="#">Caja</a>
+            <a href="productos.html">Editar Productos</a>
+            <a href="pedidos.html">Historial de Pedidos</a>
+            <a href="corte.html">Corte</a>
+        </div>
+        <div class="title">
+            <h1>Cafetería</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="menu-section">
+            <h2>Menú del día</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>A la carta</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Bebidas</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agregar más productos para demostrar el scroll -->
+            <h2>Especiales</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Imagen</div>
+                    <div class="product-info">
+                        <span>Nombre</span>
+                        <span>Precio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-section">
+            <p>Pedido No. _______</p>
+
+            <table class="order-table">
+                <tr>
+                    <th>Producto</th>
+                    <th>Val. Unit</th>
+                    <th>Cant</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Producto</td>
+                    <td>Val. Unit</td>
+                    <td>Cant</td>
+                    <td>Total</td>
+                    <td>
+                        <button class="quantity-btn">+</button>
+                        <button class="quantity-btn">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Producto</td>
+                    <td>Val. Unit</td>
+                    <td>Cant</td>
+                    <td>Total</td>
+                    <td>
+                        <button class="quantity-btn">+</button>
+                        <button class="quantity-btn">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Producto</td>
+                    <td>Val. Unit</td>
+                    <td>Cant</td>
+                    <td>Total</td>
+                    <td>
+                        <button class="quantity-btn">+</button>
+                        <button class="quantity-btn">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Producto</td>
+                    <td>Val. Unit</td>
+                    <td>Cant</td>
+                    <td>Total</td>
+                    <td>
+                        <button class="quantity-btn">+</button>
+                        <button class="quantity-btn">-</button>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="payment-summary">
+                <p>Total a pagar: $_______</p>
+                <p>Dinero recibido: $_______</p>
+                <p>Cambio: $_______</p>
+                <label>
+                    <input type="checkbox" name="beca"> Beca alimenticia
+                </label>
+            </div>
+
+            <button class="btn-pay">Procesar Pago</button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

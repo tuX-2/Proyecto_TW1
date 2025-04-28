@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería - Historial de Pedidos</title>
+
+    <link rel="stylesheet" href="assets/css/pedidosstyles.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav-links">
+            <a href="index.html">Caja</a>
+            <a href="productos.html">Editar Productos</a>
+            <a href="#" style="text-decoration: underline;">Historial de Pedidos</a>
+            <a href="corte.html">Corte</a>
+        </div>
+        <div class="title">
+            <h1>Cafetería</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th class="date-column">Fecha y hora</th>
+                    <th class="description-column">Pedido (Descripción)</th>
+                    <th class="amount-column">Monto</th>
+                    <th class="client-column">Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de ejemplo, en una aplicación real estas serían generadas dinámicamente -->
+                <tr>
+                    <td>27/04/2025<br>10:15 AM</td>
+                    <td>2 Café americano, 1 Sandwich de jamón</td>
+                    <td>$120.00</td>
+                    <td>Juan Pérez</td>
+                </tr>
+                <tr>
+                    <td>27/04/2025<br>09:30 AM</td>
+                    <td>1 Cappuccino, 2 Croissant</td>
+                    <td>$85.00</td>
+                    <td>María González</td>
+                </tr>
+                <tr>
+                    <td>26/04/2025<br>15:45 PM</td>
+                    <td>3 Té chai, 3 Galletas de avena</td>
+                    <td>$150.00</td>
+                    <td>Carlos Rodríguez</td>
+                </tr>
+                <tr>
+                    <td>26/04/2025<br>12:20 PM</td>
+                    <td>2 Menú del día (Sopa, ensalada, plato fuerte)</td>
+                    <td>$220.00</td>
+                    <td>Ana Martínez</td>
+                </tr>
+                <tr>
+                    <td>25/04/2025<br>16:10 PM</td>
+                    <td>4 Frappé de chocolate, 2 Brownies</td>
+                    <td>$180.00</td>
+                    <td>Pedro Sánchez</td>
+                </tr>
+                <tr>
+                    <td>25/04/2025<br>08:45 AM</td>
+                    <td>1 Desayuno completo (Huevos, pan tostado, jugo)</td>
+                    <td>$95.00</td>
+                    <td>Laura Jiménez</td>
+                </tr>
+                <tr>
+                    <td>24/04/2025<br>14:30 PM</td>
+                    <td>3 Limonada, 3 Ensalada César</td>
+                    <td>$210.00</td>
+                    <td>Roberto Gómez</td>
+                </tr>
+                <tr>
+                    <td>24/04/2025<br>11:15 AM</td>
+                    <td>2 Expresso doble, 2 Muffins de arándanos</td>
+                    <td>$120.00</td>
+                    <td>Sofía López</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Botón de búsqueda flotante -->
+        <button class="search-btn" id="searchBtn">
+            <i>🔍</i>
+        </button>
+
+        <!-- Modal de búsqueda -->
+        <div class="search-modal" id="searchModal">
+            <div class="search-content">
+                <div class="search-header">
+                    <h2>Buscar Pedidos</h2>
+                    <button class="close-btn" id="closeBtn">&times;</button>
+                </div>
+                <div class="search-form">
+                    <div class="form-group">
+                        <label for="dateFrom">Desde:</label>
+                        <input type="date" id="dateFrom">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateTo">Hasta:</label>
+                        <input type="date" id="dateTo">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientName">Cliente:</label>
+                        <input type="text" id="clientName" placeholder="Nombre del cliente">
+                    </div>
+                    <div class="form-group">
+                        <label for="orderType">Tipo de pedido:</label>
+                        <select id="orderType">
+                            <option value="">Todos</option>
+                            <option value="menu">Menú del día</option>
+                            <option value="alacarte">A la carta</option>
+                            <option value="bebidas">Bebidas</option>
+                        </select>
+                    </div>
+                    <div class="search-actions">
+                        <button id="searchSubmitBtn">Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/pedidos.js"></script>
+</body>
+
+</html>
