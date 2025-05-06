@@ -1,0 +1,127 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Cafetería - Corte
+    link(rel="stylesheet", href="/stylesheets/cortestyles.css")
+
+  body
+    .header
+      .nav-links
+        a(href="/") Caja
+        a(href="/productos") Editar Productos
+        a(href="/pedidos") Historial de Pedidos
+        a(href="#", style="text-decoration: underline;") Corte
+      .title
+        h1 Cafetería
+
+    .container
+      .main-content
+        h2 Movimientos
+
+        .date-selector
+          input.date-input#startDate(type="date", value="2025-04-01")
+          input.date-input#endDate(type="date", value="2025-04-27")
+
+        table.movements-table
+          thead
+            tr
+              th No. Movimiento
+              th Fecha
+              th No. Pedido
+              th Tipo de Pago
+              th Total
+          tbody
+            tr
+              td 001
+              td 27/04/2025 10:15
+              td P-2025-042701
+              td Efectivo
+              td $120.00
+            tr
+              td 002
+              td 27/04/2025 09:30
+              td P-2025-042702
+              td Tarjeta
+              td $85.00
+            tr
+              td 003
+              td 26/04/2025 15:45
+              td P-2025-042601
+              td Efectivo
+              td $150.00
+            tr
+              td 004
+              td 26/04/2025 12:20
+              td P-2025-042602
+              td Beca Alimenticia
+              td $220.00
+            tr
+              td 005
+              td 25/04/2025 16:10
+              td P-2025-042501
+              td Tarjeta
+              td $180.00
+            tr
+              td 006
+              td 25/04/2025 08:45
+              td P-2025-042502
+              td Efectivo
+              td $95.00
+            tr
+              td 007
+              td 24/04/2025 14:30
+              td P-2025-042401
+              td Tarjeta
+              td $210.00
+            tr
+              td 008
+              td 24/04/2025 11:15
+              td P-2025-042402
+              td Efectivo
+              td $120.00
+            tr
+              td 009
+              td 23/04/2025 17:45
+              td P-2025-042301
+              td Beca Alimenticia
+              td $175.00
+            tr
+              td 010
+              td 23/04/2025 13:30
+              td P-2025-042302
+              td Efectivo
+              td $90.00
+
+        .pagination
+          button &laquo;
+          button.active 1
+          button 2
+          button 3
+          button &raquo;
+
+      .sidebar
+        .balance-card
+          h3 Saldo Inicial
+          .balance-info
+            label Fecha
+            .value 01/04/2025
+          .balance-info
+            label Saldo
+            .value $5,000.00
+
+        .balance-card.final-balance
+          h3 Saldo Final
+          .balance-info
+            label Fecha
+            .value 27/04/2025
+          .balance-info
+            label Saldo
+            .value $15,445.00
+
+        button.print-btn
+          span.print-icon 🖨️
+          |  Imprimir Corte
+
+    script(src="/javascripts/corte.js")

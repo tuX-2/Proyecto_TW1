@@ -1,0 +1,145 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Cafetería
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
+  body
+    .header
+      .nav-links
+        a(href="#") Caja
+        a(href="/productos") Editar Productos
+        a(href="/pedidos") Historial de Pedidos
+        a(href="/corte") Corte
+      .title
+        h1 Cafetería
+
+    .container
+      .menu-section
+        h2 Menú del día
+        .products-grid
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+
+        h2 A la carta
+        .products-grid
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+
+        h2 Bebidas
+        .products-grid
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+
+        h2 Especiales
+        .products-grid
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+          .product-card
+            .product-image Imagen
+            .product-info
+              span Nombre
+              span Precio
+
+      .order-section
+        p Pedido No. _______
+        table.order-table
+          tr
+            th Producto
+            th Val. Unit
+            th Cant
+            th Total
+            th
+          tr
+            td Producto
+            td Val. Unit
+            td Cant
+            td Total
+            td
+              button.quantity-btn + 
+              button.quantity-btn - 
+          tr
+            td Producto
+            td Val. Unit
+            td Cant
+            td Total
+            td
+              button.quantity-btn + 
+              button.quantity-btn - 
+          tr
+            td Producto
+            td Val. Unit
+            td Cant
+            td Total
+            td
+              button.quantity-btn + 
+              button.quantity-btn - 
+          tr
+            td Producto
+            td Val. Unit
+            td Cant
+            td Total
+            td
+              button.quantity-btn + 
+              button.quantity-btn - 
+
+        .payment-summary
+          p Total a pagar: $_______
+          p Dinero recibido: $_______
+          p Cambio: $_______
+          label
+            input(type="checkbox", name="beca")
+            | Beca alimenticia
+
+        button.btn-pay Procesar Pago
+
+    script(src="/javascripts/main.js")

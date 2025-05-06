@@ -1,0 +1,99 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Cafetería - Historial de Pedidos
+    link(rel="stylesheet", href="/stylesheets/pedidosstyles.css")
+
+  body
+    div.header
+      div.nav-links
+        a(href="/") Caja
+        a(href="/productos") Editar Productos
+        a(href="#", style="text-decoration: underline;") Historial de Pedidos
+        a(href="/corte") Corte
+      div.title
+        h1 Cafetería
+    
+    div.container
+      table.orders-table
+        thead
+          tr
+            th.date-column Fecha y hora
+            th.description-column Pedido (Descripción)
+            th.amount-column Monto
+            th.client-column Cliente
+        tbody
+          tr
+            td 27/04/2025<br>10:15 AM
+            td 2 Café americano, 1 Sandwich de jamón
+            td $120.00
+            td Juan Pérez
+          tr
+            td 27/04/2025<br>09:30 AM
+            td 1 Cappuccino, 2 Croissant
+            td $85.00
+            td María González
+          tr
+            td 26/04/2025<br>15:45 PM
+            td 3 Té chai, 3 Galletas de avena
+            td $150.00
+            td Carlos Rodríguez
+          tr
+            td 26/04/2025<br>12:20 PM
+            td 2 Menú del día (Sopa, ensalada, plato fuerte)
+            td $220.00
+            td Ana Martínez
+          tr
+            td 25/04/2025<br>16:10 PM
+            td 4 Frappé de chocolate, 2 Brownies
+            td $180.00
+            td Pedro Sánchez
+          tr
+            td 25/04/2025<br>08:45 AM
+            td 1 Desayuno completo (Huevos, pan tostado, jugo)
+            td $95.00
+            td Laura Jiménez
+          tr
+            td 24/04/2025<br>14:30 PM
+            td 3 Limonada, 3 Ensalada César
+            td $210.00
+            td Roberto Gómez
+          tr
+            td 24/04/2025<br>11:15 AM
+            td 2 Expresso doble, 2 Muffins de arándanos
+            td $120.00
+            td Sofía López
+      
+      // Botón de búsqueda flotante
+      button.search-btn#searchBtn
+        i 🔍
+      
+      // Modal de búsqueda
+      div.search-modal#searchModal
+        div.search-content
+          div.search-header
+            h2 Buscar Pedidos
+            button.close-btn#closeBtn &times;
+          div.search-form
+            div.form-group
+              label(for="dateFrom") Desde:
+              input(type="date", id="dateFrom")
+            div.form-group
+              label(for="dateTo") Hasta:
+              input(type="date", id="dateTo")
+            div.form-group
+              label(for="clientName") Cliente:
+              input(type="text", id="clientName", placeholder="Nombre del cliente")
+            div.form-group
+              label(for="orderType") Tipo de pedido:
+              select#orderType
+                option(value="") Todos
+                option(value="menu") Menú del día
+                option(value="alacarte") A la carta
+                option(value="bebidas") Bebidas
+            div.search-actions
+              button#searchSubmitBtn Buscar
+
+    script(src="/javascripts/pedidos.js")

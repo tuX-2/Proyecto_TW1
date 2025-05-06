@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.menu-section {
+    width: 70%;
+    padding: 15px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.order-section {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product-card {
+    width: 150px;
+    background-color: #e0e0e0;
+    padding: 5px;
+}
+
+.product-image {
+    width: 100%;
+    height: 100px;
+    background-color: #888;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.order-table td,
+.order-table th {
+    padding: 5px;
+    text-align: left;
+}
+
+.payment-summary {
+    background-color: #f8d7da;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.payment-summary p {
+    margin: 5px 0;
+}
+
+.btn-pay {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
