@@ -42,6 +42,25 @@ Actualmente, se está construyendo la estructura base del proyecto, incluyendo:
 
 ---
 
+## 🚀Cómo usar este proyecto
+
+- Clona este repositorio.
+- Instala las dependencias necesarias (npm install).
+- Ejecuta el servidor (npm start).
+- Abre tu navegador en: http://localhost:3000
+- (Asegúrate de tener Node.js instalado en tu equipo).
+
+---
+
+## ❓¿Dónde encontrar ayuda?
+
+Si necesitas ayuda con el proyecto puedes:
+- Revisar la documentación en este repositorio (PENDIENTE).
+- Reportar un problema en la sección Issues.
+- Contactar directamente con los autores.
+
+---
+
 ## 👥 Equipo
 
 - [@tuX-2](https://github.com/tuX-2) - José González
