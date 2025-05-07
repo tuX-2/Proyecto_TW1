@@ -78,6 +78,11 @@ h2 {
     margin-bottom: 5px;
 }
 
+.product-image img {
+    width: 90%;
+    height: 90px;
+}
+
 .product-info {
     display: flex;
     justify-content: space-between;
@@ -104,14 +109,56 @@ h2 {
     margin: 5px 0;
 }
 
+.order-section {
+    width: 30%;
+    background-color: #f9f9f9;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.order-list {
+    overflow-y: auto;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.order-footer {
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    flex-shrink: 0;
+}
+
 .btn-pay {
-    background-color: #e74c3c;
-    color: white;
     border: none;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-confirm {
+    background-color: #27ae60; /* verde */
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #c0392b; /* rojo más fuerte */
+    color: white;
+}
+
+.btn-pay:hover {
+    opacity: 0.9;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .quantity-btn {

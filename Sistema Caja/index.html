@@ -28,24 +28,24 @@
             <h2>Menú del día</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">Imagen</div>
+                    <div class="product-image"><img src="assets/images/HuevoosConJamos.jpg" alt=""></div>
                     <div class="product-info">
-                        <span>Nombre</span>
-                        <span>Precio</span>
+                        <span>Huevos con Jamon</span>
+                        <span>$50.00</span>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Imagen</div>
+                    <div class="product-image"><img src="assets/images/MoleDePollo.jpg" alt=""></div>
                     <div class="product-info">
-                        <span>Nombre</span>
-                        <span>Precio</span>
+                        <span>Mole de pollo</span>
+                        <span>$50.00</span>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Imagen</div>
+                    <div class="product-image"><img src="assets/images/TacosDorados.jpg" alt=""></div>
                     <div class="product-info">
-                        <span>Nombre</span>
-                        <span>Precio</span>
+                        <span>Tacos Dorados</span>
+                        <span>$50.00</span>
                     </div>
                 </div>
             </div>
@@ -130,70 +130,57 @@
         <div class="order-section">
             <p>Pedido No. _______</p>
 
-            <table class="order-table">
-                <tr>
-                    <th>Producto</th>
-                    <th>Val. Unit</th>
-                    <th>Cant</th>
-                    <th>Total</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Val. Unit</td>
-                    <td>Cant</td>
-                    <td>Total</td>
-                    <td>
-                        <button class="quantity-btn">+</button>
-                        <button class="quantity-btn">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Val. Unit</td>
-                    <td>Cant</td>
-                    <td>Total</td>
-                    <td>
-                        <button class="quantity-btn">+</button>
-                        <button class="quantity-btn">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Val. Unit</td>
-                    <td>Cant</td>
-                    <td>Total</td>
-                    <td>
-                        <button class="quantity-btn">+</button>
-                        <button class="quantity-btn">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Producto</td>
-                    <td>Val. Unit</td>
-                    <td>Cant</td>
-                    <td>Total</td>
-                    <td>
-                        <button class="quantity-btn">+</button>
-                        <button class="quantity-btn">-</button>
-                    </td>
-                </tr>
-            </table>
-
-            <div class="payment-summary">
-                <p>Total a pagar: $_______</p>
-                <p>Dinero recibido: $_______</p>
-                <p>Cambio: $_______</p>
-                <label>
-                    <input type="checkbox" name="beca"> Beca alimenticia
-                </label>
+            <div class="order-list">
+                <table class="order-table">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Val. Unit</th>
+                        <th>Cant</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Mole de pollo</td>
+                        <td>$50.00</td>
+                        <td>2</td>
+                        <td>$100.00</td>
+                        <td>
+                            <button class="quantity-btn">+</button>
+                            <button class="quantity-btn">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tacos dorados</td>
+                        <td>$50.00</td>
+                        <td>1</td>
+                        <td>$50.00</td>
+                        <td>
+                            <button class="quantity-btn">+</button>
+                            <button class="quantity-btn">-</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <button class="btn-pay">Procesar Pago</button>
-        </div>
-    </div>
+            <div class="order-footer">
+                <div class="payment-summary">
+                    <p>Total a pagar: $150.00</p>
+                    <p>Dinero recibido: $200.00</p>
+                    <p>Cambio: $50.00</p>
+                    <label>
+                        <input type="checkbox" name="beca"> Beca alimenticia
+                    </label>
+                </div>
 
-    <script src="assets/js/main.js"></script>
+                <div class="button-group">
+                    <button class="btn-pay btn-confirm">Procesar Pago</button>
+                    <button class="btn-pay btn-cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>
