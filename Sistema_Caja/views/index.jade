@@ -103,46 +103,34 @@ html(lang="es")
             th Total
             th
           tr
-            td Producto
-            td Val. Unit
-            td Cant
-            td Total
+            td Mole de pollo
+            td $50.00
+            td 2
+            td $100.00
             td
-              button.quantity-btn + 
-              button.quantity-btn - 
+              button.quantity-btn +
+              button.quantity-btn -
           tr
-            td Producto
-            td Val. Unit
-            td Cant
-            td Total
+            td Tacos dorados
+            td $50.00
+            td 1
+            td $50.00
             td
-              button.quantity-btn + 
-              button.quantity-btn - 
-          tr
-            td Producto
-            td Val. Unit
-            td Cant
-            td Total
-            td
-              button.quantity-btn + 
-              button.quantity-btn - 
-          tr
-            td Producto
-            td Val. Unit
-            td Cant
-            td Total
-            td
-              button.quantity-btn + 
-              button.quantity-btn - 
+              button.quantity-btn +
+              button.quantity-btn -
 
-        .payment-summary
-          p Total a pagar: $_______
-          p Dinero recibido: $_______
-          p Cambio: $_______
-          label
-            input(type="checkbox", name="beca")
-            | Beca alimenticia
-
-        button.btn-pay Procesar Pago
+        // El footer con fondo rosa ahora está al final del div
+        .order-footer
+          .payment-summary
+            p Total a pagar: $150.00
+            p Dinero recibido: $200.00
+            p Cambio: $50.00
+            label
+              input(type="checkbox" name="beca")
+              | Beca alimenticia
+        
+            .button-group
+              button.btn-pay.btn-confirm Procesar Pago
+              button.btn-pay.btn-cancel Cancelar
 
     script(src="/javascripts/main.js")
