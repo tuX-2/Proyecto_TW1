@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corte de Caja - Cafetería</title>
+    <link rel="stylesheet" href="/stylesheets/styles_corte.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-coffee"></i> Sistema de Caja - Cafetería</h1>
+                <div class="header-info">
+                    <span id="current-time"></span>
+                    <span class="divider">|</span>
+                    <span>Cajero: Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Corte de Caja Header -->
+            <div class="corte-header">
+                <h2 class="corte-title">Corte de Caja</h2>
+                <div class="corte-date">10/6/2025</div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Total Ventas</div>
+                    <div class="stat-value">$0.00</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Pedidos</div>
+                    <div class="stat-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Promedio por Pedido</div>
+                    <div class="stat-value">$0.00</div>
+                </div>
+            </div>
+
+            <!-- Movimientos Recientes -->
+            <div class="movimientos-section">
+                <h3 class="section-title">Movimientos Recientes</h3>
+                <div class="table-container">
+                    <table class="movements-table">
+                        <thead>
+                            <tr>
+                                <th>No. Movimiento</th>
+                                <th>Fecha</th>
+                                <th>No. Pedido</th>
+                                <th>Tipo de Pago</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="no-transactions">
+                                    No hay transacciones registradas
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="balance-card">
+                <div class="balance-label">Saldo Inicial</div>
+                <div class="balance-date">10/05/2025</div>
+                <div class="balance-value">$0.0</div>
+            </div>
+            <div class="balance-card">
+                <div class="balance-label">Saldo Final</div>
+                <div class="balance-date">10/05/2025</div>
+                <div class="balance-value">$0.0</div>
+            </div>
+            <button class="finalize-btn">
+                <i class="fas fa-check"></i>
+                <span>Finalizar Corte</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="/" style="text-decoration: none;">
+            <button class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </button>
+        </a>
+        <a href="/productos" style="text-decoration: none;">
+            <button class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Productos</span>
+            </button>
+        </a>
+        <a href="#" style="text-decoration: none;">
+            <button class="nav-btn">
+                <i class="fas fa-home"></i>
+                <span>Corte de caja</span>
+            </button>
+        </a>
+        <button class="nav-btn">
+            <i class="fas fa-bell"></i>
+            <span>Notificaciones</span>
+            <div class="notification-dot"></div>
+        </button>
+    </nav>
+
+    <script src="/javascripts/script_corte.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Caja - Cafetería - Productos</title>
+    <link rel="stylesheet" href="/stylesheets/styles_products.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-coffee"></i> Sistema de Caja - Cafetería</h1>
+                <div class="header-info">
+                    <span id="current-time"></span>
+                    <span class="divider">|</span>
+                    <span>Cajero: "Admin"</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-title">
+                    <i class="fas fa-box"></i>
+                    <h2>Administrar Productos</h2>
+                </div>
+                <button class="btn btn-primary" id="btn-agregar-producto">
+                    <i class="fas fa-plus"></i> Agregar Producto
+                </button>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-section">
+                <input type="text" id="buscar-producto-admin" class="input-busqueda"
+                    placeholder="🔍 Buscar producto...">
+            </div>
+
+            <!-- Categories Navigation (Horizontal) -->
+            <div class="categories-nav" id="categories-nav">
+                <div class="category-chip active" data-category="">
+                    <i class="fas fa-th-large"></i>
+                    Todas las Categorías
+                </div>
+                <div class="category-chip" data-category="menu">
+                    <i class="fas fa-utensils"></i>
+                    Menú del día
+                </div>
+                <div class="category-chip" data-category="platillo">
+                    <i class="fas fa-hamburger"></i>
+                    Platillos
+                </div>
+                <div class="category-chip" data-category="bebida">
+                    <i class="fas fa-coffee"></i>
+                    Bebidas
+                </div>
+            </div>
+
+            <!-- Products Grid (Horizontal Layout) -->
+            <div class="products-grid" id="products-grid">
+                <!-- Los productos se generan dinámicamente -->
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="/" style="text-decoration: none;">
+                <button class="nav-btn">
+                    <i class="fas fa-home"></i>
+                    <span>Inicio</span>
+                </button>
+            </a>
+            <a href="#" style="text-decoration: none;">
+                <button class="nav-btn">
+                    <i class="fas fa-box"></i>
+                    <span>Productos</span>
+                </button>
+            </a>
+            <a href="/corte" style="text-decoration: none;">
+                <button class="nav-btn">
+                    <i class="fas fa-cash-register"></i>
+                    <span>Corte de caja</span>
+                </button>
+            </a>
+            <a href="/notificaciones" style="text-decoration: none;">
+                <button class="nav-btn">
+                    <i class="fas fa-bell"></i>
+                    <span>Notificaciones</span>
+                    <div class="notification-dot"></div>
+                </button>
+            </a>
+        </nav>
+    </div>
+
+    <script src="/javascripts/script_products.js"></script>
+</body>
+
+</html>

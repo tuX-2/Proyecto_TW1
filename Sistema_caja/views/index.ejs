@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Sistema de Caja - Cafetería' %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-coffee"></i> <%= nombreSistema || 'Sistema de Caja - Cafetería' %></h1>
+                <div class="header-info">
+                    <span id="current-time"></span>
+                    <span class="divider">|</span>
+                    <span>Cajero: <%= cajero || 'Admin' %></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Pedidos Entrantes -->
+            <section class="column">
+                <div class="column-header incoming">
+                    <i class="fas fa-clock"></i>
+                    <h2>Pedidos Entrantes</h2>
+                    <span class="badge" id="incoming-count"><%= pedidosEntrantes ? pedidosEntrantes.length : 0 %></span>
+                </div>
+                <div class="orders-container" id="incoming-orders">
+                    <% if (pedidosEntrantes && pedidosEntrantes.length > 0) { %>
+                        <% pedidosEntrantes.forEach(pedido => { %>
+                            <div class="order-card" data-order-id="<%= pedido.id %>">
+                                <div class="order-header">
+                                    <span class="order-number">#<%= pedido.numero %></span>
+                                    <span class="order-time"><%= pedido.hora %></span>
+                                </div>
+                                <div class="order-items">
+                                    <% pedido.items.forEach(item => { %>
+                                        <div class="item">
+                                            <span><%= item.nombre %></span>
+                                            <span>x<%= item.cantidad %></span>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                                <div class="order-total">
+                                    Total: $<%= pedido.total %>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-accept" onclick="acceptOrder('<%= pedido.id %>')">Aceptar</button>
+                                    <button class="btn-reject" onclick="rejectOrder('<%= pedido.id %>')">Rechazar</button>
+                                </div>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <p>No hay pedidos entrantes</p>
+                        </div>
+                    <% } %>
+                </div>
+            </section>
+
+            <!-- Pedidos Aceptados -->
+            <section class="column">
+                <div class="column-header accepted">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Pedidos Aceptados</h2>
+                    <span class="badge" id="accepted-count"><%= pedidosAceptados ? pedidosAceptados.length : 0 %></span>
+                </div>
+                <div class="orders-container" id="accepted-orders">
+                    <% if (pedidosAceptados && pedidosAceptados.length > 0) { %>
+                        <% pedidosAceptados.forEach(pedido => { %>
+                            <div class="order-card accepted" data-order-id="<%= pedido.id %>">
+                                <div class="order-header">
+                                    <span class="order-number">#<%= pedido.numero %></span>
+                                    <span class="order-time"><%= pedido.hora %></span>
+                                </div>
+                                <div class="order-items">
+                                    <% pedido.items.forEach(item => { %>
+                                        <div class="item">
+                                            <span><%= item.nombre %></span>
+                                            <span>x<%= item.cantidad %></span>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                                <div class="order-total">
+                                    Total: $<%= pedido.total %>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-kitchen" onclick="sendToKitchen('<%= pedido.id %>')">Enviar a Cocina</button>
+                                </div>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <div class="empty-state">
+                            <i class="fas fa-check-circle"></i>
+                            <p>No hay pedidos aceptados</p>
+                        </div>
+                    <% } %>
+                </div>
+            </section>
+
+            <!-- Pedidos en Cocina -->
+            <section class="column">
+                <div class="column-header kitchen">
+                    <i class="fas fa-utensils"></i>
+                    <h2>Pedidos en Cocina</h2>
+                    <span class="badge" id="kitchen-count"><%= pedidosCocina ? pedidosCocina.length : 0 %></span>
+                </div>
+                <div class="orders-container" id="kitchen-orders">
+                    <% if (pedidosCocina && pedidosCocina.length > 0) { %>
+                        <% pedidosCocina.forEach(pedido => { %>
+                            <div class="order-card kitchen" data-order-id="<%= pedido.id %>">
+                                <div class="order-header">
+                                    <span class="order-number">#<%= pedido.numero %></span>
+                                    <span class="order-time"><%= pedido.hora %></span>
+                                    <span class="cooking-time">🕐 <%= pedido.tiempoCocina || '5 min' %></span>
+                                </div>
+                                <div class="order-items">
+                                    <% pedido.items.forEach(item => { %>
+                                        <div class="item">
+                                            <span><%= item.nombre %></span>
+                                            <span>x<%= item.cantidad %></span>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                                <div class="order-total">
+                                    Total: $<%= pedido.total %>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn-complete" onclick="completeOrder('<%= pedido.id %>')">Completar</button>
+                                </div>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <div class="empty-state">
+                            <i class="fas fa-utensils"></i>
+                            <p>No hay pedidos en cocina</p>
+                        </div>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn <% if (paginaActual === 'inicio') { %>active<% } %>" id="home-btn">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </button>
+            <a href="/productos" style="text-decoration: none;">
+                <button class="nav-btn <% if (paginaActual === 'productos') { %>active<% } %>" id="products-btn">
+                    <i class="fas fa-box"></i>
+                    <span>Productos</span>
+                </button>
+            </a>
+            <a href="/corte" style="text-decoration: none;">
+                <button class="nav-btn <% if (paginaActual === 'corte') { %>active<% } %>" id="reports-btn">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Corte de caja</span>
+                </button>
+            </a>
+            <button class="nav-btn" id="notifications-btn">
+                <i class="fas fa-bell"></i>
+                <span>Notificaciones</span>
+                <% if (notificaciones && notificaciones > 0) { %>
+                    <div class="notification-dot" id="notification-dot"><%= notificaciones %></div>
+                <% } %>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Modal para método de pago -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Seleccionar Método de Pago</h3>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-summary" id="order-summary"></div>
+                <div class="payment-methods">
+                    <button class="payment-btn" data-method="efectivo">
+                        <i class="fas fa-money-bill-wave"></i>
+                        Efectivo
+                    </button>
+                    <button class="payment-btn" data-method="tarjeta">
+                        <i class="fas fa-credit-card"></i>
+                        Tarjeta
+                    </button>
+                    <button class="payment-btn" data-method="transferencia">
+                        <i class="fas fa-mobile-alt"></i>
+                        Transferencia
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-payment">Cancelar</button>
+                <button class="btn btn-primary" id="confirm-payment" disabled>Confirmar Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de productos agotados -->
+    <div class="modal" id="notifications-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Marcar productos como agotados</h3>
+                <button class="close-btn" id="close-notifications">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="input-busqueda" id="buscar-producto" placeholder="Buscar producto..." />
+                <div class="resultados-busqueda" id="resultados-productos">
+                    <% if (productos && productos.length > 0) { %>
+                        <% productos.forEach(producto => { %>
+                            <div class="producto-item" data-id="<%= producto.id %>">
+                                <span><%= producto.nombre %></span>
+                                <span class="precio">$<%= producto.precio %></span>
+                                <button class="btn-toggle-stock <%= producto.agotado ? 'agotado' : 'disponible' %>" 
+                                        onclick="toggleStock('<%= producto.id %>')">
+                                    <%= producto.agotado ? 'Agotado' : 'Disponible' %>
+                                </button>
+                            </div>
+                        <% }); %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+
+    
+
+</body>
+</html>
