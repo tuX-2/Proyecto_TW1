@@ -38,7 +38,7 @@ Actualmente, se está construyendo la estructura base del proyecto, incluyendo:
 
 ## 📸 Capturas de pantalla
 
-![Interfaz Principal](Sistema_caja/public/images/principal.png.png)
+![Interfaz Principal](Sistema_caja/public/images/principal.png)
 
 ---
 
