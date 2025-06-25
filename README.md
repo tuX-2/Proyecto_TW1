@@ -38,7 +38,7 @@ Actualmente, se está construyendo la estructura base del proyecto, incluyendo:
 
 ## 📸 Capturas de pantalla
 
-*Por añadir una vez que las primeras pantallas estén listas.*
+![Interfaz Principal](Sistema_caja/public/images/principal.png.png)
 
 ---
 
@@ -71,7 +71,7 @@ Si necesitas ayuda con el proyecto puedes:
 
 ---
 
-##🛡️licencia
+## 🛡️licencia
 
 Creative Commons
 
