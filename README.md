@@ -70,3 +70,13 @@ Si necesitas ayuda con el proyecto puedes:
 
 
 ---
+
+##🛡️licencia
+
+Creative Commons
+
+Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+  ![image](https://github.com/user-attachments/assets/abcf9281-136c-4bad-986f-3c7a8e794faf)
+
