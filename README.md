@@ -38,7 +38,15 @@ Actualmente, se está construyendo la estructura base del proyecto, incluyendo:
 
 ## 📸 Capturas de pantalla
 
+- Interfaz principal
 ![Interfaz Principal](assets/principal.png)
+- Productos
+![Productos](assets/productos1.png)
+![Productos](assets/productos2.png)
+- Caja
+![Caja](assets/caja.png)
+- Notificaciones
+![Notificaciones](assets/notificaciones.png)
 
 ---
 
