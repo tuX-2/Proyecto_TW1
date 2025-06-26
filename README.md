@@ -63,7 +63,7 @@ Actualmente, se está construyendo la estructura base del proyecto, incluyendo:
 ## ❓¿Dónde encontrar ayuda?
 
 Si necesitas ayuda con el proyecto puedes:
-- Revisar la documentación en este repositorio (PENDIENTE).
+- Revisar la documentación en este repositorio.
 - Reportar un problema en la sección Issues.
 - Contactar directamente con los autores.
 
