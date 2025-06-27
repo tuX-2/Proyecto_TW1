@@ -36,6 +36,43 @@ Actualmente, se está construyendo la estructura base del proyecto, incluyendo:
 
 ---
 
+## 📁 Estructura del Proyecto
+
+```
+Sistema_caja/
+├── 📁 assets/                    # Recursos estáticos del proyecto
+├── 📁 bin/
+│   └── www                       # Archivo de configuración del servidor
+├── 📁 public/                    # Archivos públicos accesibles desde el cliente
+│   ├── 📁 javascripts/           # Scripts del lado del cliente
+│   └── 📁 stylesheets/           # Hojas de estilo CSS
+├── 📁 routes/                    # Rutas del servidor Express
+│   ├── index.js                  # Rutas principales
+│   └── users.js                  # Rutas de usuarios
+├── 📁 views/                     # Vistas y plantillas
+│   ├── corte.ejs                 # Vista del corte de caja
+│   ├── error.ejs                 # Vista de errores
+│   ├── index.ejs                 # Vista principal
+│   └── productos.ejs             # Vista de gestión de productos
+├── app.js                        # Archivo principal de la aplicación
+├── package-lock.json             # Dependencias bloqueadas
+├── package.json                  # Configuración y dependencias del proyecto
+├── .gitignore                    # Archivos ignorados por Git
+└── README.md                     # Documentación del proyecto
+```
+
+### Descripción de Carpetas
+
+- **`assets/`**: Contiene imágenes, capturas de pantalla y otros recursos estáticos utilizados en la documentación.
+- **`bin/`**: Archivos de configuración del servidor, incluyendo el punto de entrada principal.
+- **`public/`**: Recursos del lado del cliente (CSS, JavaScript, imágenes) accesibles directamente por el navegador.
+- **`routes/`**: Define las rutas y endpoints de la API del servidor Express.
+- **`views/`**: Plantillas EJS para renderizar las diferentes páginas de la aplicación.
+- **`app.js`**: Archivo principal que configura y ejecuta la aplicación Express.
+- **`package.json`**: Define las dependencias, scripts y metadatos del proyecto.
+  
+---
+
 ## 📸 Capturas de pantalla
 
 - Interfaz principal
